@@ -1,7 +1,9 @@
+import ListItem from "./components/ListItem";
+
 const App = () => {
   return (
     <div>
-      Hello!
+     <ListItem />
     </div>
   );
 }
