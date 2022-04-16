@@ -1,3 +1,5 @@
+import AddToCartIcon from "../assets/icons/cart.png"
+
 const ListItem = () => {
   return (
     <div>
@@ -13,7 +15,7 @@ const ListItem = () => {
       </div>
       <button>
         <span>Add to Card</span>
-        <img src=" " alt="" />
+        <img style={{height: "1rem"}}src={AddToCartIcon} alt="Cart Icon" />
       </button>
     </div>
   )
