@@ -1,9 +1,9 @@
-import AddToCartIcon from "../assets/icons/cart.png"
+import AddToCartIcon from "../assets/icons/add_cart.svg"
 
 const ListItem = () => {
   return (
     <div className={"item-card"}>
-      <img className={"img-fluid"}src="logo192.png" alt="Some title" />
+      <img className={"img-fluid"}src="placeholder1.png" alt="Some title" />
       <div className={"item-card__information"}>
         <span className={"pricing"}>$340</span>
         <small>
@@ -15,7 +15,7 @@ const ListItem = () => {
       </div>
       <button className="cart-add">
         <span>Add to Card</span>
-        <img style={{height: "1rem"}}src={AddToCartIcon} alt="Cart Icon" />
+        <img src={AddToCartIcon} alt="Cart Icon" />
       </button>
     </div>
   )
