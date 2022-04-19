@@ -1,12 +1,12 @@
 import AddToCartIcon from "../assets/icons/add_cart.svg"
 
-const ListItem = () => {
-  const data = {
+const ListItem = ({ data }) => {
+  /*const data = {
     discountedPrice: 340,
     price: 450,
     title: "title of the Item",
     thumbnail: "placeholder1.png"
-  }
+  } Use data as props in app.js <ListItem />*/
   return (
     <div className={"item-card"}>
       <img className={"img-fluid"}src={`/${data.thumbnail}`} alt={data.title} />
