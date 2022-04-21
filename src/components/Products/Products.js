@@ -19,8 +19,8 @@ const items = [
 
 const Products = () => {
   return (
-    <div className={"product-list"}>
-      <div className={"product-list--wrapper"}>
+    <div classNameName={"product-list"}>
+      <div classNameName={"product-list--wrapper"}>
         <ListItem data={items[0]} />
         <ListItem data={items[1]} />
       </div>
