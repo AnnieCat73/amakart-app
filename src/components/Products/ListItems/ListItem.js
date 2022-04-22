@@ -7,6 +7,11 @@ const ListItem = ({ data }) => {
     title: "title of the Item",
     thumbnail: "placeholder1.png"
   } Use data as props in app.js <ListItem />*/
+
+  const handleClick = () => {
+    console.log("clicked!")
+  }
+
   return (
     <div className={"item-card"}>
       <img className={"img-fluid"} src={`/${data.thumbnail}`} alt={data.title} />
@@ -19,7 +24,7 @@ const ListItem = ({ data }) => {
       <div className={"title"}>
         <h3 style={{ marginLeft: "8px" }}>{data.title}</h3>
       </div>
-      <button className="cart-add">
+      <button className="cart-add" onClick={handleClick}>
         <span>Add to Card</span>
         <img src={AddToCartIcon} alt="Cart Icon" />
       </button>
