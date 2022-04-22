@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Doppio+One&display=swap");
-@import "./styles/variables";
+@import "./styles/_variables";
 @import "./styles/items.scss";
 @import "./styles/header.scss";
 @import "./styles/subheader.scss";
@@ -27,7 +27,7 @@ body {
 
 
 
-.product-list {
+/*.product-list {
   padding: 16px 32px;
   width: 100%;
   min-height: 100vh;
@@ -37,4 +37,4 @@ body {
     padding-left: 40px;
     flex-wrap: wrap;
   }
-}
+}*/

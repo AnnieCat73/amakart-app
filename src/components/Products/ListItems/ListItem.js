@@ -8,18 +8,18 @@ const ListItem = ({ data }) => {
     thumbnail: "placeholder1.png"
   } Use data as props in app.js <ListItem />*/
   return (
-    <div classNameName={"item-card"}>
-      <img classNameName={"img-fluid"} src={`/${data.thumbnail}`} alt={data.title} />
-      <div classNameName={"item-card__information"}>
-        <span classNameName={"pricing"}>${data.discountedPrice}</span>
+    <div className={"item-card"}>
+      <img className={"img-fluid"} src={`/${data.thumbnail}`} alt={data.title} />
+      <div className={"item-card__information"}>
+        <span className={"pricing"}>${data.discountedPrice}</span>
         <small>
           <strike style={{ marginLeft: "8px" }}>${data.price}</strike>
         </small>
       </div>
-      <div classNameName={"title"}>
+      <div className={"title"}>
         <h3 style={{ marginLeft: "8px" }}>{data.title}</h3>
       </div>
-      <button classNameName="cart-add">
+      <button className="cart-add">
         <span>Add to Card</span>
         <img src={AddToCartIcon} alt="Cart Icon" />
       </button>

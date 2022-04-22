@@ -10,7 +10,6 @@ const App = () => {
       <Header />
       <Subheader />
       <Products />
-
     </div>
   );
 }
