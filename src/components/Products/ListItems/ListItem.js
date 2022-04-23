@@ -1,4 +1,5 @@
 import AddToCartIcon from "../../../assets/icons/add_cart.svg"
+import { useState } from "react"
 
 const ListItem = ({ data }) => {
   /*const data = {
@@ -8,8 +9,13 @@ const ListItem = ({ data }) => {
     thumbnail: "placeholder1.png"
   } Use data as props in app.js <ListItem />*/
 
+  const [message, setMessage] = useState()
+
+  //let message = "Not added to the cart yet"
   const handleClick = () => {
-    console.log("clicked!")
+    //message = "Added to the cart!";
+    setMessage("Added to the Cart!");
+    console.log("Clicked ", message)
   }
 
   return (
@@ -24,6 +30,7 @@ const ListItem = ({ data }) => {
       <div className={"title"}>
         <h3 style={{ marginLeft: "8px" }}>{data.title}</h3>
       </div>
+      <small className={"cart-message"}>{message}</small>
       <button className="cart-add" onClick={handleClick}>
         <span>Add to Card</span>
         <img src={AddToCartIcon} alt="Cart Icon" />
