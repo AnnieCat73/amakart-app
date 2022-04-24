@@ -19,11 +19,25 @@ const items = [
 
 const Products = () => {
   return (
-    <div className={"product-list"}>
+    <div className={"product-wrapper"}>
+      <div className={"form"}>
+        <form>
+          <h2>Item Card Details</h2>
+          <div className={"input-field"}>
+            <label htmlFor="title">Title</label>
+            <input type="text" placeholder="Enter Title" />
+          </div>
+        </form>
+
+      </div>
+
+
+
+      {/*<div className={"product-list"}>
       <div className={"product-list--wrapper"}>
         <ListItem data={items[0]} />
         <ListItem data={items[1]} />
-      </div>
+      </div>*/}
     </div>
   )
 }

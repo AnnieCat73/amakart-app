@@ -8,7 +8,20 @@ const ListItem = ({ data }) => {
     title: "title of the Item",
     thumbnail: "placeholder1.png"
   } Use data as props in app.js <ListItem />*/
+  const [counter, setCounter] = useState(0);
 
+  const increaseCounterByOne = () => {
+    setCounter(counter + 1);
+  }
+
+  const decreaseCounterByOne = () => {
+    if (counter <= 0) { //so not get -1 etc
+      return
+    } else {
+      setCounter(counter - 1);
+    }
+
+  }
 
 
 
@@ -32,9 +45,9 @@ const ListItem = ({ data }) => {
         <img src={AddToCartIcon} alt="Cart Icon" />
       </button>*/}
       <div className={"cart-addon"}>
-        <button><span>-</span></button>
-        <span className={"counter"}>{0}</span>
-        <button><span>+</span></button>
+        <button onClick={decreaseCounterByOne}><span>-</span></button>
+        <span className={"counter"}>{counter}</span>
+        <button onClick={increaseCounterByOne}><span>+</span></button>
       </div>
     </div>
   )
