@@ -1,4 +1,5 @@
 import ListItem from "./ListItems/ListItem"
+import { useState } from "react";
 
 const items = [
   {
@@ -18,6 +19,11 @@ const items = [
 ]
 
 const Products = () => {
+  const [title, setTitle] = useState("")
+  const handleTitle = (e) => {
+    //console.log(e.target.value)
+    setTitle(e.target.value)
+  }
   return (
     <div className={"product-wrapper"}>
       <div className={"form"}>
@@ -25,7 +31,12 @@ const Products = () => {
           <h2>Item Card Details</h2>
           <div className={"input-field"}>
             <label htmlFor="title">Title</label>
-            <input type="text" placeholder="Enter Title" />
+            <input
+              type="text"
+              placeholder="Enter Title"
+              value={title}
+              onChange={handleTitle}
+            />
           </div>
         </form>
 
