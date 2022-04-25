@@ -1,7 +1,7 @@
 import ListItem from "./ListItems/ListItem"
 import { useState } from "react";
 
-const items = [
+/*const items = [
   {
     id: 0,
     title: "Title of this Item 1",
@@ -9,21 +9,47 @@ const items = [
     discountedPrice: 340,
     thumbnail: "placeholder1.png"
   },
-  {
+ {
     id: 1,
     title: "Title of this Item 2",
     price: 100,
     discountedPrice: 80,
     thumbnail: "placeholder1.png"
   }
-]
+]*/
 
 const Products = () => {
-  const [title, setTitle] = useState("")
+
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState(0);
+  const [discountedPrice, setDisountedPrice] = useState(0);
+  const [thumbnail, setThumbnail] = useState("");
+
+  const [item, setItem] = useState({
+    id: 0,
+    title: "Title of this Item 1",
+    price: 450,
+    discountedPrice: 340,
+    thumbnail: "placeholder1.png"
+  })
+
   const handleTitle = (e) => {
     //console.log(e.target.value)
     setTitle(e.target.value)
   }
+
+  const handlePrice = e => {
+    setPrice(e.target.value);
+  }
+
+  const handleDiscountedPrice = e => {
+    setDisountedPrice(e.target.value);
+  }
+
+  const handleThumbnail = e => {
+    setThumbnail(e.target.value)
+  }
+
   return (
     <div className={"product-wrapper"}>
       <div className={"form"}>
@@ -38,10 +64,39 @@ const Products = () => {
               onChange={handleTitle}
             />
           </div>
+          <div className={"input-field"}>
+            <label htmlFor="price">Price</label>
+            <input
+              type="number"
+              placeholder="Enter Price"
+              value={price}
+              onChange={handlePrice}
+            />
+          </div>
+          <div className={"input-field"}>
+            <label htmlFor="discount price">Discount Price</label>
+            <input
+              type="number"
+              placeholder="Enter Discounted Price"
+              value={discountedPrice}
+              onChange={handleDiscountedPrice}
+            />
+          </div>
+          <div className={"input-field"}>
+            <label htmlFor="thumbnail">Thumbnail</label>
+            <input
+              type="text"
+              placeholder="Enter Thumbnail name"
+              value={thumbnail}
+              onChange={handleThumbnail}
+            />
+          </div>
         </form>
 
       </div>
-
+      <div>
+        <ListItem data={item} />
+      </div>
 
 
       {/*<div className={"product-list"}>
@@ -49,7 +104,7 @@ const Products = () => {
         <ListItem data={items[0]} />
         <ListItem data={items[1]} />
       </div>*/}
-    </div>
+    </div >
   )
 }
 
