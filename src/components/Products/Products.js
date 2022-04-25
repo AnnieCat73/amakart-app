@@ -50,10 +50,25 @@ const Products = () => {
     setThumbnail(e.target.value)
   }
 
+  const submitForm = e => {
+    e.preventDefault();
+    console.log({
+      title: title,
+      price,
+      discountedPrice,
+      thumbnail
+    })
+    setItem({
+      title: title,
+      price,
+      discountedPrice,
+      thumbnail
+    })
+  }
   return (
     <div className={"product-wrapper"}>
       <div className={"form"}>
-        <form>
+        <form onSubmit={submitForm}>
           <h2>Item Card Details</h2>
           <div className={"input-field"}>
             <label htmlFor="title">Title</label>
@@ -62,6 +77,7 @@ const Products = () => {
               placeholder="Enter Title"
               value={title}
               onChange={handleTitle}
+              required
             />
           </div>
           <div className={"input-field"}>
@@ -71,6 +87,7 @@ const Products = () => {
               placeholder="Enter Price"
               value={price}
               onChange={handlePrice}
+              required
             />
           </div>
           <div className={"input-field"}>
@@ -80,6 +97,7 @@ const Products = () => {
               placeholder="Enter Discounted Price"
               value={discountedPrice}
               onChange={handleDiscountedPrice}
+              required
             />
           </div>
           <div className={"input-field"}>
@@ -89,7 +107,11 @@ const Products = () => {
               placeholder="Enter Thumbnail name"
               value={thumbnail}
               onChange={handleThumbnail}
+              required
             />
+          </div>
+          <div>
+            <button className={"submit-wrap"}></button>
           </div>
         </form>
 
